@@ -1,0 +1,45 @@
+.promo-box {
+  padding: rem(129) 0 rem(122);
+  font-weight: 300;
+  color: #fff;
+  background-color: #2d353a;
+  @include media('<tablet') {
+    padding: rem(80) 0;
+  }
+  @include media('<640px') {
+    padding: rem(52) 0 rem(39);
+  }
+  &__inner {
+    max-width: 718px;
+    margin-left: 15.3%;
+    @include media('<desktop') {
+      margin-left: 0;
+    }
+  }
+  &__title {
+    margin-bottom: rem(17);
+    font-size: rem(48);
+    font-weight: 100;
+    line-height: 1.29;
+    @include media('<tablet') {
+      margin-bottom: rem(13);
+      font-size: rem(38);
+      line-height: 1.15;
+    }
+  }
+  &__highlight {
+    color: #fff
+  }
+  &__txt {
+    margin-bottom: rem(16);
+    font-size: rem(24);
+    line-height: 1.38;
+    color: #b1b3b5;
+    @include media('<tablet') {
+      margin-bottom: rem(14);
+      padding-right: rem(45);
+      font-size: rem(18);
+      line-height: 1.6;
+    }
+  }
+}

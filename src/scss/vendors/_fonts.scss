@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'radikal';
+  src: url('../fonts/nootype_-_radikal_thin-webfont.woff2') format('woff2'),
+       url('../fonts/nootype_-_radikal_thin-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'radikal';
+  src: url('../fonts/nootype_-_radikal_thin_italic-webfont.woff2') format('woff2'),
+       url('../fonts/nootype_-_radikal_thin_italic-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'radikal';
+  src: url('../fonts/nootype_-_radikal_light-webfont.woff2') format('woff2'),
+       url('../fonts/nootype_-_radikal_light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'radikal';
+  src: url('../fonts/nootype_-_radikal_light_italic-webfont.woff2') format('woff2'),
+       url('../fonts/nootype_-_radikal_light_italic-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'radikal';
+  src: url('../fonts/nootype_-_radikal-webfont.woff2') format('woff2'),
+       url('../fonts/nootype_-_radikal-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'radikal';
+  src: url('../fonts/nootype_-_radikal_italic-webfont.woff2') format('woff2'),
+       url('../fonts/nootype_-_radikal_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'radikal';
+  src: url('../fonts/nootype_-_radikal_medium-webfont.woff2') format('woff2'),
+       url('../fonts/nootype_-_radikal_medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'radikal';
+  src: url('../fonts/nootype_-_radikal_medium_italic-webfont.woff2') format('woff2'),
+       url('../fonts/nootype_-_radikal_medium_italic-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'radikal';
+  src: url('../fonts/nootype_-_radikal_bold-webfont.woff2') format('woff2'),
+       url('../fonts/nootype_-_radikal_bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'radikal';
+  src: url('../fonts/nootype_-_radikal_bold_italic-webfont.woff2') format('woff2'),
+       url('../fonts/nootype_-_radikal_bold_italic-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.woff?ohtnsi') format('woff'),
+       url('../fonts/icomoon.svg?ohtnsi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-chevron-right:before {
+  content: "\e90d";
+}
+.icon-chevron-left:before {
+  content: "\e90e";
+}
+.icon-check:before {
+  content: "\e90b";
+  color: $accent-color;
+}
+.icon-arrow-down:before {
+  content: "\e90c";
+}
+.icon-mail:before {
+  content: "\e90a";
+}
+.icon-jc-logo:before {
+  content: "\e900";
+}
+.icon-arrow-down-left:before {
+  content: "\e901";
+}
+.icon-arrow-up-left:before {
+  content: "\e902";
+  color: #004dea;
+}
+.icon-cross:before {
+  content: "\e903";
+}
+.icon-facebook:before {
+  content: "\e904";
+}
+.icon-github-big-logo:before {
+  content: "\e905";
+}
+.icon-github-logo:before {
+  content: "\e906";
+}
+.icon-github-logo-bg:before {
+  content: "\e907";
+}
+.icon-linkedin:before {
+  content: "\e908";
+}
+.icon-twitter:before {
+  content: "\e909";
+}

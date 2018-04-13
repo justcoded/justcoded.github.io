@@ -1,1 +1,141 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#19191b">
+	<meta name="msapplication-navbutton-color" content="#19191b">
+  <title>GitHub portfolio by JustCoded</title>
+  <meta name="description" content="A handy collection of our modules, plugins, and useful components from GitHub.">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/style.min.css">
+
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/images/favicon/manifest.json">
+	<link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta property="og:image" content="assets/images/justcoded_github.jpg" />
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <header class="header">
+      <div class="holder">
+        <div class="header__top-line">
+          <a href="https://justcoded.com/" class="logo icon-jc-logo" target="_blank">
+            <span class="logo__postfix">Github</span>
+          </a>
+          <a href="https://github.com/justcoded" class="github-logo" target="_blank">
+            <span class="sr-only">JustCoded github link</span>
+          </a>
+          <div class="get-in-touch">
+            <a href="https://justcoded.com/contact/" target="_blank" class="get-in-touch__link">
+              <span class="get-in-touch__txt">Get in touch</span>
+              <span class="get-in-touch__icon">&nbsp;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="promo-box">
+      <div class="holder">
+        <div class="promo-box__inner">
+          <h1 class="promo-box__title">Welcome to our GitShowcase</h1>
+          <p class="promo-box__txt">We develop web and mobile applications for <span class="promo-box__highlight">FinTech, Real Estate, eCommerce, Luxury and Travel sectors.</span></p>
+          <p class="promo-box__txt">This is a handy list of our modules and components available at <span class="promo-box__highlight">GitHub</span>. Feel free to use them and drop us a line if there's anything you want to ask!</p>
+        </div>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="filter" id="filter">
+        <div class="filter__panel">
+          <div class="holder">
+            <div class="filter__inner">
+              <div class="filter__descr" :class="{ 'filter__descr--expanded': mobileDropDown.isVisible }">
+                <span class="filter__title" @click="toggleMobileCategories">Select  Technology</span>
+                <a href="#" class="filter__clear" @click.prevent="clearAll">Clear All</a>
+              </div>
+              <div class="filter__categories" :class="{ 'filter__categories--is-shown': mobileDropDown.isVisible }">
+
+                  <a href="#" class="filter__clear" @click.prevent="clearAll">Clear All</a>
+
+                  <filter-button
+                    v-for="item in filterButtons"
+                    :callback="setFilter"
+                    :button="item"
+                    :key="item.filter"
+                    :data-filter="item.filter"
+                    :disabled="item.isDisabled"
+                    :class="{ active: item.isActive }" />
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects__wrapper" :class="{ 'projects__wrapper--is-loading': isLoading }">
+
+          <filter-projects
+            :projects="getFilteredProjects"
+            :callback="setFilter"
+            :current-page="currentPage" />
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="holder">
+        <div class="footer__inner">
+          <div class="footer__item">
+            <a href="https://justcoded.com/" class="logo icon-jc-logo" target="_blank">
+              <span class="sr-only">JustCoded</span>
+            </a>
+          </div>
+          <div class="footer__item">
+            <ul class="jc-contact">
+              <li><span>E: </span><a href="mailto:hello@justcoded.com">hello@justcoded.com</a></li>
+              <li><span>T: </span><a href="tel:+442080687050">+44 20 8068 7050</a></li>
+            </ul>
+          </div>
+          <div class="footer__item">
+              <a href="https://github.com/justcoded" class="github-logo" target="_blank">
+                <span class="sr-only">JustCoded github link</span>
+              </a>
+          </div>
+          <div class="footer__item">
+            <div class="jc-address">
+              <address>
+                United Kingdom <br>
+                2 Stephen St, London, W1T 1AN
+              </address>
+            </div>
+          </div>
+          <div class="footer__item">
+            <div class="jc-social">
+              <span class="jc-social__txt">Follow us: </span>
+              <div class="jc-social__links">
+                <a href="https://github.com/justcoded" target="_blank"><i class="icon-github-logo-bg"></i></a>
+                <a href="http://www.linkedin.com/company/justcoded" target="_blank"><i class="icon-linkedin"></i></a>
+                <a href="http://www.facebook.com/justcoded" target="_blank"><i class="icon-facebook"></i></a>
+                <a href="http://twitter.com/JustCoded" target="_blank"><i class="icon-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+
+</body>
+</html>

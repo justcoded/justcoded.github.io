@@ -1,0 +1,62 @@
+.jc {
+  &-address {
+    address {
+      font-style: normal;
+      line-height: 1.43;
+    }
+    @include media('<tablet') {
+      max-width: 40%;
+      margin: 0 auto;
+    }
+  }
+  &-contact {
+    @extend %listreset;
+    li {
+      white-space: nowrap;
+      & + li {
+        margin-top: rem(4);
+        @include media('<tablet') {
+          margin-top: rem(8);
+        }
+      }
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.2s;
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+  &-social {
+    display: flex;
+    justify-content: flex-end;
+    @include media('<desktop') {
+      flex-direction: column;
+    }
+    &__txt {
+      margin-right: rem(10);
+      @include media('<desktop') {
+        margin-right: 0;
+        margin-bottom: rem(5);
+      }
+      @include media('<tablet') {
+        margin-bottom: rem(9);
+      }
+    }
+    &__links {
+      a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.2s;
+        &:hover {
+          color: $accent-color;
+        }
+        & + a {
+          margin-left: rem(8);
+        }
+      }
+    }
+  }
+}

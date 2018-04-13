@@ -1,0 +1,48 @@
+.footer {
+  padding: rem(35) 0 rem(40);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  color: #333;
+  @include media('<tablet') {
+    padding: rem(60) 0 0;
+  }
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @include media('<tablet') {
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    flex-basis: 20%;
+    font-size: rem(14);
+    padding-right: rem(15);
+    @include media('<tablet') {
+      flex-basis: 100%;
+      margin-bottom: rem(24);
+      padding-right: 0;
+      text-align: center;
+      &:nth-of-type(2) {
+        order: 2;
+      }
+      &:nth-of-type(3) {
+        display: flex;
+        justify-content: center;
+        order: 4;
+        margin-bottom: 0;
+      }
+      &:nth-of-type(4) {
+        order: 3;
+      }
+      &:last-of-type {
+        order: 1;
+      }
+    }
+  }
+  .github-logo {
+    @include media('<tablet') {
+      position: static;
+      transform: none;
+    }
+  }
+}

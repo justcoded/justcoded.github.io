@@ -1,0 +1,205 @@
+.filter {
+  background-color: #f9f9f9;
+  @include media('<tablet') {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @include media('<640px') {
+      position: relative;
+      flex-direction: column;
+    }
+  }
+  &__panel {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: rem(28) rem(15) rem(30);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background-color: #fff;
+    @include media('<1100px') {
+      padding: rem(20) rem(15) rem(10);
+    }
+    @include media('<tablet') {
+      padding: rem(25) 0 rem(15);
+    }
+    @include media('<640px') {
+      padding: rem(15) 0 rem(20);
+    }
+    @include media('<phone') {
+      border-bottom: 0;
+    }
+  }
+  &__descr {
+    flex-shrink: 0;
+    margin-right: rem(30);
+    @include media('<640px') {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      margin-right: 0;
+      border-bottom: 1px dotted #bebdbd;
+      &::after {
+        content: url('../images/arrow-down.svg');
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        background-repeat: no-repeat;
+        background-position: top 10px right 5px;
+        transition: transform 0.2s;
+        pointer-events: none;
+      }
+    }
+    &--expanded {
+      &::after {
+        transform: translate(0, 3px) scale(-1);
+      }
+    }
+  }
+  &__title {
+    display: block;
+    padding-bottom: rem(5);
+    font-size: rem(14);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    @include media('<640px') {
+      position: relative;
+      width: 100%;
+      display: inline;
+      padding: rem(5) 0 rem(5);
+      white-space: nowrap;
+      cursor: pointer;
+      overflow: hidden;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, rgba(255, 255, 255,0.001) 78%, #fff 92%);
+      }
+    }
+  }
+  &__clear {
+    font-size: rem(13);
+    text-decoration: none;
+    color: #8e8e8e;
+    &:hover {
+      text-decoration: underline;
+    }
+    @include media('<tablet') {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    @include media('<640px') {
+      display: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    .filter__clear {
+      display: none;
+      @include media('<640px') {
+        order: 1;
+        display: inline-block;
+        margin: rem(10) auto rem(15);
+        color: $accent-color;
+      }
+    }
+    @include media('<640px') {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 2;
+      max-width: 205px;
+      height: auto;
+      padding-top: rem(5);
+      background-color: #fff;
+      box-shadow: 0 34px 30px -13px rgba(0, 0, 0, 0.16);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s;
+      &--is-shown {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__button {
+    display: inline-block;
+    margin-right: rem(7);
+    margin-bottom: rem(10);
+    padding: rem(4) rem(19) rem(3);
+    font-size: rem(14);
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    border: 1px solid #b0cdfc;
+    border-radius: rem(16);
+    color: $accent-color;
+    background-color: transparent;
+    text-decoration: none;
+    transition: background-color 0.25s, color 0.25s;
+    outline: 0;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &:hover {
+      color: #fff;
+      border-color: $accent-color;
+      background-color: $accent-color;
+    }
+    &.active {
+      color: #fff;
+      border-color: $accent-color;
+      background-color: $accent-color;
+      @include media('<640px') {
+        color: #000;
+        opacity: 1;
+        background-color: transparent;
+        background-image: url('../images/check.svg');
+        background-repeat: no-repeat;
+        background-position: top 12px left 12px;
+      }
+    }
+    @include media('<1367px') {
+      margin-right: rem(10);
+      padding-left: rem(12);
+      padding-right: rem(12);
+      font-size: rem(12);
+    }
+    @include media('<tablet') {
+      margin-right: rem(5);
+      padding: rem(2) rem(12);
+    }
+    @include media('<640px') {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: rem(4) rem(30);
+      font-size: rem(14);
+      text-align: left;
+      color: $base-text-color;
+      border: 0;
+      border-radius: 0;
+      opacity: 0.7;
+      &:hover {
+        color: $base-text-color;
+        background-color: transparent;
+      }
+      &:active {
+        background-color: rgba(#f5f5f5, 0.7);
+      }
+    }
+
+  }
+}

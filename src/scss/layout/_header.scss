@@ -1,0 +1,14 @@
+.header {
+  background-color: #fff;
+
+  &__top-line {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: rem(82);
+    @include media('<640px') {
+      height: rem(53);
+    }
+  }
+}
