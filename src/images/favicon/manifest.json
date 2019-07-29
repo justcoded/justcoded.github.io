@@ -1,13 +1,23 @@
 {
-    "name": "",
+    "short_name": "JustCoded GitHub",
+    "name": "JustCoded GitHub",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "start_url": "/",
+    "lang": "en",
     "icons": [
         {
-            "src": "assets/images/favicon/android-chrome-144x144.png",
-            "sizes": "144x144",
+            "src": "/images/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
 }

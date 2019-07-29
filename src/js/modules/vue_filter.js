@@ -44,6 +44,7 @@
       filterButtons: [
         { text: 'WordPress', filter: 'WordPress', isActive: false, isDisabled: false },
         { text: 'PHP', filter: 'PHP', isActive: false, isDisabled: false },
+        { text: 'Gulp', filter: 'Gulp', isActive: false, isDisabled: false },
         { text: 'HTML5/CSS3', filter: 'HTML5/CSS3', isActive: false, isDisabled: false },
         { text: 'JavaScript', filter: 'JavaScript', isActive: false, isDisabled: false },
         { text: 'Vue.js', filter: 'Vue.js', isActive: false, isDisabled: false },
@@ -110,7 +111,7 @@
             src: 'assets/images/web_starter.jpg',
             srcset: 'assets/images/web_starter.jpg, assets/images/web_starter-2x.jpg 2x',
           },
-          tags: ['HTML5/CSS3', 'Node.js'],
+          tags: ['Gulp', 'Node.js'],
           isVisible: true,
         },
         {
